@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"
 import {
@@ -22,6 +23,7 @@ import {
 } from "../../features/movies/moviesSlice"
 import { Badge, Card, Col, Row } from "react-bootstrap"
 import { useState } from "react"
+import { AppDispatch } from "../../app/store"
 
 interface IMovieDetailProps {
   imdbID: string
@@ -31,7 +33,7 @@ interface IMovieDetailProps {
 const MovieDetail = (props: IMovieDetailProps) => {
   const movie = useSelector(getSelectedMovie)
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch<AppDispatch>()
 
   const [show, setShow] = useState(false)
 

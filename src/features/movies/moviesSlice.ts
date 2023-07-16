@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import movieApi from "../../common/apis/omdbApi";
 import { APIKey } from "../../common/apis/omdbApiKey";

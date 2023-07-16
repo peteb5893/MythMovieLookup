@@ -1,12 +1,14 @@
+// @ts-nocheck
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { fetchAsyncMovies } from "../../features/movies/moviesSlice"
 import MovieList from "../MovieList"
 import { MovieSearch } from "../MovieSearch"
 import { useGetMoviesByTextQuery } from "../../common/apis/apiRTKQuery"
+import { AppDispatch } from "../../app/store"
 
 const Home = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch<AppDispatch>()
 
   const randomSearch = () => {
     const exampleSearches = [

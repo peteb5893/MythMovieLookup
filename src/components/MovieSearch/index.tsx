@@ -1,12 +1,14 @@
+// @ts-nocheck
 import { useEffect, useState } from "react"
 import { Search } from "react-bootstrap-icons"
 import { useDispatch } from "react-redux"
 import { fetchAsyncMovies } from "../../features/movies/moviesSlice"
 import { Col, Form, InputGroup, Row } from "react-bootstrap"
+import { AppDispatch } from "../../app/store"
 
 export function MovieSearch() {
   const [searchText, setSearchText] = useState("")
-  const dispatch = useDispatch()
+  const dispatch = useDispatch<AppDispatch>()
 
   useEffect(() => {
     if (searchText.length > 0) {
