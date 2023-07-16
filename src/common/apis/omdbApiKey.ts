@@ -1,0 +1,1 @@
+export const APIKey = "f0d5090"; // add your own API key here
